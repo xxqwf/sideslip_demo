@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sideslip_demo/pages/sideslip_paint2.dart';
+import 'package:sideslip_demo/pages/utils/sideslip_paint2.dart';
 
 class BezierMovePointer extends StatefulWidget {
   const BezierMovePointer({Key? key}) : super(key: key);

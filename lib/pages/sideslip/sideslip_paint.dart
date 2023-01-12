@@ -2,11 +2,11 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:sideslip_demo/pages/my_home.dart';
+import 'package:sideslip_demo/pages/sideslip/sideslip_animation_widget.dart';
 
 class CustomSideslipPainter extends CustomPainter {
   final Offset indexPoint;
-  final SideSlideAlign? align;
+  final SideslipAlign? align;
 
   CustomSideslipPainter(this.indexPoint, this.align);
 
@@ -34,7 +34,7 @@ class CustomSideslipPainter extends CustomPainter {
     Offset offset4 = const Offset(0, 0);
     Offset offset5 = Offset(indexPointX * 1, indexPointY + halfHeight * 0.18);
     switch (align!) {
-      case SideSlideAlign.left:
+      case SideslipAlign.left:
         path.moveTo(0, 0);
         startOffset = const Offset(0, 0);
         endOffset = Offset(0, size.height);
@@ -42,13 +42,13 @@ class CustomSideslipPainter extends CustomPainter {
         offset1 = Offset(indexPointX * 0.064, indexPointY - halfHeight * 0.24);
         offset4 = Offset(indexPointX * 0.135, indexPointY + halfHeight * 0.127);
         break;
-      case SideSlideAlign.top:
+      case SideslipAlign.top:
         path.moveTo(0, 0);
         startOffset = const Offset(0, 0);
         endOffset = Offset(0, size.width);
         centerOffset = Offset(indexPointX, 0);
         break;
-      case SideSlideAlign.right:
+      case SideslipAlign.right:
         path.moveTo(size.width, 0);
         startOffset = Offset(size.width, 0);
         endOffset = Offset(size.width, size.height);
@@ -58,7 +58,7 @@ class CustomSideslipPainter extends CustomPainter {
         offset4 = Offset(size.width - (size.width - indexPointX) * 0.135,
             indexPointY + halfHeight * 0.127);
         break;
-      case SideSlideAlign.bottom:
+      case SideslipAlign.bottom:
         path.moveTo(0, size.height);
         startOffset = Offset(0, size.height);
         endOffset = Offset(size.width, size.height);
