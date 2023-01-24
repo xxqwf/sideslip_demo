@@ -27,8 +27,8 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
       alignment: Alignment.center,
       color: Colors.cyanAccent,
       child: Container(
-        height: 300,
-        width: 300,
+        height: double.infinity,
+        width: double.infinity,
         color: Colors.white,
         child: SideslipAnimationWidget(
           child: Column(
